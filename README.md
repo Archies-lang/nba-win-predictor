@@ -21,7 +21,7 @@ A machine learning system that predicts NBA game outcomes with 82.6% accuracy us
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/nba-win-predictor.git
+git clone https://github.com/Archies/nba-win-predictor.git
 cd nba-win-predictor
 ```
 
@@ -186,9 +186,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Author**: [Your Name]
-- **Email**: [your.email@example.com]
-- **Project Link**: https://github.com/yourusername/nba-win-predictor
+- **Author**: Archies
+- **Email**: bhandaryarchies@gmail.com
+- **Project Link**: https://github.com/Archies/nba-win-predictor
 
 ---
 
