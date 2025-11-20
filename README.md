@@ -186,8 +186,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Contact
 
-- **Author**: Archies
-- **Email**: bhandaryarchies@gmail.com
 - **Project Link**: https://github.com/Archies/nba-win-predictor
 
 ---

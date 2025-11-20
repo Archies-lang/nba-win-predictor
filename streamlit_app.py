@@ -42,7 +42,7 @@ model_package = load_model()
 team_games_df = load_data()
 
 # Prediction function
-def predict_game_streamlit(team_a, team_b, game_date, is_team_a_home=True):
+def predict_game_streamlit(team_a, team_b, game_date, is_home=True):
     """NBA game prediction function for Streamlit"""
     if model_package is None or team_games_df is None:
         return {'error': 'Model or data not available'}
@@ -80,7 +80,7 @@ def predict_game_streamlit(team_a, team_b, game_date, is_team_a_home=True):
         elif feat == 'OPP_ROLL5_WIN':
             prediction_features[feat] = team_b_recent.get('ROLL5_WON', 0.5)
         elif feat == 'IS_HOME':
-            prediction_features[feat] = 1 if is_team_a_home else 0
+            prediction_features[feat] = 1 if is_home else 0
         elif feat == 'DAYS_SINCE_LAST':
             days_diff = (game_date - team_a_recent['GAME_DATE']).days
             prediction_features[feat] = days_diff
@@ -170,7 +170,7 @@ def live_predictions_page():
                 start_time = time.time()
                 
                 # Get real prediction from our trained model
-                result = predict_game_streamlit(team_a, team_b, str(game_date), is_team_a_home)
+                result = predict_game_streamlit(team_a, team_b, str(game_date), is_home)
                 
                 processing_time = time.time() - start_time
                 
